@@ -19,6 +19,22 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  .header-actions { display: flex; align-items: center; gap: 10px; }
+
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--azul-fundo-claro);
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.theme-toggle:hover { background: var(--azul-fundo-medio); }
+.theme-toggle:active { transform: scale(0.92); }
+
   .page {
     max-width: 1440px;
     margin: 0 auto;
