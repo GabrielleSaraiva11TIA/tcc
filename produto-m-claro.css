@@ -32,11 +32,16 @@
     border-bottom: 1px solid var(--borda);
   }
   .logo {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--azul);
-    letter-spacing: 0.5px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--azul);
+  letter-spacing: 0.5px;
+}
+.logo-pin { color: var(--azul); flex-shrink: 0; }
+
   .nav-links {
     display: flex;
     gap: 36px;
