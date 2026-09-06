@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LUMIS — Home</title>
-<link rel="stylesheet" href="style.css">
+<title>LUMIS — Quem Somos</title>
+<link rel="stylesheet" href="quem-somos-claro.css">
 <script src="produto-claro.js"></script>
 </head>
 <body>
@@ -21,16 +21,16 @@
       LUMIS
     </div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="./instrucoes-claro.html">Instruções</a></li>
       <li><a href="./produto-m-claro.html">Produto</a></li>
-      <li><a href="./quem-somos-claro.html">Quem Somos?</a></li>
+      <li><a href="./quem-somos-claro.html" class="active">Quem Somos?</a></li>
       <li><a href="#">Referências</a></li>
       <li><a href="#">Jogo</a></li>
     </ul>
 
     <div class="nav-actions">
-      <a class="theme-toggle" href="index-escuro.html" aria-label="Ver versão escura">
+      <a class="theme-toggle" href="quem-somos-escuro.html" aria-label="Ver versão escura">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="currentColor"/>
         </svg>
@@ -38,7 +38,6 @@
 
       <a href="#" class="btn btn-primary btn-desktop-only">Entrar</a>
 
-      <!-- Botão hambúrguer — só aparece em telas mobile -->
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
         <span></span>
         <span></span>
@@ -48,114 +47,135 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-copy">
-      <span class="badge">Inovação em Acessibilidade</span>
-      <h1>Lumis e a pulseira sensorial: tecnologia que <br><span class="text-azul">transforma sons em conexão.</span></h1>
-      <p>Desenvolvida para apoiar o desenvolvimento e a inclusão de crianças surdas através de estímulos táteis e visuais de alta precisão.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary">Saiba mais</a>
-        <a href="#" class="btn btn-outline">Ver Demonstração</a>
-      </div>
-    </div>
-    <div class="hero-image img-placeholder"><img src="./images/gato.jpeg" alt=""></div>
+  <section class="hero-equipe">
+    <h1>Conheça Nossa Equipe</h1>
+    <p>A LUMIS nasceu para transformar a jornada de oralização de crianças surdas através de tecnologia multissensorial, empatia e inovação.</p>
+    
   </section>
 
-  <!-- DIFERENCIAIS -->
-  <section class="section-diferenciais">
-    <div class="section-head">
-      <h2>Diferenciais do Projeto</h2>
-      <p>Tecnologia e afeto integrados para uma experiência educacional transformadora.</p>
-    </div>
-    <div class="diferenciais-grid">
-      <div class="diferenciais-image img-placeholder"><img src="./images/gato-relogio-mais-fundo.png" alt=""></div>
-      <div class="diferenciais-list">
-        <div class="feature-card">
-          <div class="feature-icon img-placeholder"><img src="./images/icone-gato.png" alt=""></div>
-          <div>
-            <h3>Gatinho Interativo</h3>
-            <p>Mascote tecnológico que torna o aprendizado acolhedor e intuitivo para crianças.</p>
-          </div>
+  <!-- TIME -->
+  <section class="section-time">
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="avatar img-placeholder"></div>
+        <h3>Maria Clara Menezes</h3>
+        <span class="handle">@menezes.clara</span>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>mariaclaramtavares2@gmail.com</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon img-placeholder"><img src="./images/icone-ondas.png" alt=""></div>
-          <div>
-            <h3>Pulseira Vibrotátil</h3>
-            <p>Transforma sons em vibrações sensoriais, auxiliando na percepção rítmica.</p>
-          </div>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>(11) 96176-9793</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon img-placeholder"><img src="./images/icone-lampada.png" alt=""></div>
-          <div>
-            <h3>Aplicativo Gamificado</h3>
-            <p>Exercícios interativos que incentivam a prática da oralização de forma leve.</p>
-          </div>
+        <div class="team-actions">
+          <span class="action-btn img-placeholder"></span>
+          <span class="action-btn img-placeholder"></span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon img-placeholder"><img src="./images/icone-raio.png" alt=""></div>
-          <div>
-            <h3>Feedback Multissensorial</h3>
-            <p>Integra estímulos visuais e táteis para uma experiência de aprendizagem completa.</p>
-          </div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar img-placeholder"><img src="./images/ana.jpeg" alt=""></div>
+        <h3>Ana Laura Oliveira Carvalho</h3>
+        <span class="handle">@laurxnac</span>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>analauracarvalho3991@gmail.com</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon img-placeholder"><img src="./images/icone-pessoa.png" alt=""></div>
-          <div>
-            <h3>Aprendizagem Acolhedora</h3>
-            <p>Foco no bem-estar emocional durante todo o processo de desenvolvimento.</p>
-          </div>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>(11) 94400-5730</span>
+        </div>
+        <div class="team-actions">
+          <span class="action-btn img-placeholder"></span>
+          <span class="action-btn img-placeholder"></span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar img-placeholder"><img src="./images/gabi.jpeg" alt=""></div>
+        <h3>Gabrielle de Moraes Saraiva</h3>
+        <span class="handle">@gabisaraiva_3</span>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>gabriellemsaraiva@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>(11) 98393-0606</span>
+        </div>
+        <div class="team-actions">
+          <span class="action-btn img-placeholder"></span>
+          <span class="action-btn img-placeholder"></span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar img-placeholder"><img src="./images/lari.jpeg" alt=""></div>
+        <h3>Larissa Schmidt Santos</h3>
+        <span class="handle">@larissa_schmidtk</span>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>Larissa.arte2@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>(11) 97890-0351</span>
+        </div>
+        <div class="team-actions">
+          <span class="action-btn img-placeholder"></span>
+          <span class="action-btn img-placeholder"></span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="avatar img-placeholder"><img src="./images/laulau.jpeg" alt=""></div>
+        <h3>Laura Tavares de Almeida</h3>
+        <span class="handle">@laurinhaat_</span>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>laura.tavares.almeida19@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <span class="icon-placeholder img-placeholder"></span>
+          <span>(11) 98651-0999</span>
+        </div>
+        <div class="team-actions">
+          <span class="action-btn img-placeholder"><img src="./images/rede" alt=""></span>
+          <span class="action-btn img-placeholder"><img src="./images/compartilhar" alt=""></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PARA QUEM CRIAMOS -->
-  <section class="section-audiencia">
-    <div class="section-head">
-      <h2>Para quem criamos</h2>
-      <p>Soluções pensadas para transformar a rotina e ampliar as possibilidades de comunicação.</p>
-    </div>
-    <div class="audiencia-grid">
-      <div class="audiencia-card">
-        <div class="audiencia-icon img-placeholder"><img src="./images/icone-bebe.png" alt=""></div>
-        <h3>Crianças</h3>
-        <p>Estímulos sensoriais que auxiliam na percepção do ambiente de forma lúdica e segura.</p>
-      </div>
-      <div class="audiencia-card">
-        <div class="audiencia-icon img-placeholder"><img src="./images/icone-familia.png" alt=""></div>
-        <h3>Famílias</h3>
-        <p>Ferramentas de conexão que facilitam a comunicação e o acompanhamento do desenvolvimento.</p>
-      </div>
-      <div class="audiencia-card">
-        <div class="audiencia-icon img-placeholder"><img src="./images/icone-formatura.png" alt=""></div>
-        <h3>Educadores</h3>
-        <p>Tecnologia assistiva que potencializa o aprendizado e a inclusão no ambiente escolar.</p>
+  <!-- FALE CONOSCO -->
+  <section class="section-contato">
+    <div class="contato-copy">
+      <h2>Fale Conosco</h2>
+      <p>Dúvidas, sugestões ou parcerias? Nossa equipe está pronta para ouvir você e construir juntos o futuro da educação inclusiva.</p>
+      <div class="contato-info">
+        <div>
+          <span class="label">E-MAIL</span>
+          <p>contato@lumis.edu.br</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- COMPROMISSO -->
-  <section class="section-compromisso">
-    <div class="compromisso-image img-placeholder"><img src="./images/crianca-gato-robo.png" alt=""></div>
-    <div class="compromisso-copy">
-      <h2>Nosso Compromisso com a Inclusão</h2>
-      <p>O projeto Lumis nasceu da necessidade de criar pontes onde antes existiam barreiras. Nosso objetivo é democratizar o acesso à tecnologia assistiva de ponta, permitindo que cada criança descubra o mundo através de novos sentidos.</p>
-      <ul class="checklist">
-        <li>Desenvolvimento Cognitivo Acelerado</li>
-        <li>Interação Social Facilitada</li>
-        <li>Segurança e Independência</li>
-      </ul>
-      <a href="#" class="link-seta">Conheça nossa história →</a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section-cta-wrap">
-    <div class="cta-card">
-      <h2>Pronto para transformar vidas?</h2>
-      <p>Junte-se à comunidade Lumis e descubra como a tecnologia pode criar um futuro mais conectado.</p>
-      <a href="#" class="btn btn-primary">Quero a minha pulseira</a>
-    </div>
+    <form class="contato-form">
+      <label>
+        Nome Completo
+        <input type="text" placeholder="Como podemos chamar você?">
+      </label>
+      <label>
+        E-mail Corporativo/Pessoal
+        <input type="email" placeholder="seuemail@exemplo.com">
+      </label>
+      <label>
+        Mensagem
+        <textarea rows="4" placeholder="Escreva aqui sua mensagem..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+    </form>
   </section>
 
   <footer>
@@ -179,7 +199,7 @@
     </ul>
   </footer>
 
-  <!-- ===== MENU MOBILE (DRAWER) — só é usado/visível em telas estreitas ===== -->
+  <!-- MENU MOBILE (DRAWER) -->
   <div class="drawer-overlay" id="drawerOverlay">
     <aside class="drawer">
       <div class="drawer-header">
@@ -200,7 +220,7 @@
       </div>
 
       <nav class="drawer-nav">
-        <a href="index.html" class="drawer-link active">
+        <a href="index.html" class="drawer-link">
           <span class="drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 11l9-7 9 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -223,7 +243,7 @@
           </svg></span>
           <span class="drawer-text">Produto</span>
         </a>
-        <a href="#" class="drawer-link">
+        <a href="./quem-somos-claro.html" class="drawer-link active">
           <span class="drawer-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/>
             <path d="M3.5 20a5.5 5.5 0 0 1 11 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -264,6 +284,5 @@
 
 </div>
 
-<script src="home-claro.js"></script>
 </body>
 </html>
