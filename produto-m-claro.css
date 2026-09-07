@@ -4,6 +4,7 @@
     --branco: #FFFFFF;
     --azul-claro: #C4D2FF;
     --bg-suave: #F5F8FF;
+    --bg-badge: #D3E2ED;
     --borda: #E2E8F5;
   }
 
@@ -22,14 +23,14 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(59, 130, 246, 0.15);
+  background: var(--bg-suave);
   color: var(--azul);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.15s ease, background 0.15s ease;
 }
-.theme-toggle:hover { background: rgba(59, 130, 246, 0.28); }
+.theme-toggle:hover { background: var(--bg-badge); }
 .theme-toggle:active { transform: scale(0.92); }
 
   .page {
@@ -351,6 +352,7 @@
   }
   .footer-left .logo { color: var(--branco); font-size: 17px; }
   .footer-left small { display: block; font-size: 11.5px; margin-top: 4px; color: #7C93CE; }
+  .footer-center { font-size: 12.5px; color: #A9BCEB; }
   .footer-links {
     display: flex;
     gap: 26px;
