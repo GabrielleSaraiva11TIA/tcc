@@ -4,7 +4,6 @@
   --branco: #FFFFFF;
   --azul-claro: #C4D2FF;
   --bg-suave: #F5F8FF;
-  --bg-badge: #D3E2ED;
   --borda: #E2E8F5;
 }
 
@@ -23,14 +22,14 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--bg-suave);
+  background: rgba(59, 130, 246, 0.15);
   color: var(--azul);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.15s ease, background 0.15s ease;
 }
-.theme-toggle:hover { background: var(--bg-badge); }
+.theme-toggle:hover { background: rgba(59, 130, 246, 0.28); }
 .theme-toggle:active { transform: scale(0.92); }
 
 .page { max-width: 1440px; margin: 0 auto; }
@@ -242,4 +241,164 @@ nav {
 .manual-copy p { font-size: 14.5px; color: var(--cinza); opacity: .8; line-height: 1.65; max-width: 420px; }
 .manual-media { height: 240px; }
 
-/* ---------- VÍDEO EM FUNCIONAMENTO
+/* ---------- VÍDEO EM FUNCIONAMENTO ---------- */
+.section-video {
+  background: var(--azul);
+  color: var(--branco);
+  text-align: center;
+  padding: 64px 64px 80px;
+}
+.section-video h2 { font-size: 24px; font-weight: 700; margin-bottom: 30px; }
+.video-frame {
+  max-width: 860px;
+  height: 420px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: repeating-linear-gradient(45deg, #002E75, #002E75 10px, #012C6E 10px, #012C6E 20px);
+  border: 1.5px dashed rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.7);
+}
+.play-btn {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.15);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.video-tags {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+.video-tags span {
+  background: rgba(0,0,0,0.45);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  border-top: 1px solid var(--borda);
+  padding: 26px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-center { font-size: 12.5px; color: var(--cinza); opacity: .75; }
+.footer-links { display: flex; gap: 26px; list-style: none; font-size: 12.5px; color: var(--cinza); }
+
+/* ---------- MENU MOBILE (DRAWER) ---------- */
+/* Some completamente no desktop; só existe/funciona abaixo do breakpoint mobile */
+.drawer-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 25, 40, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.drawer-overlay.open { opacity: 1; pointer-events: auto; }
+
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 78%;
+  max-width: 320px;
+  background: var(--branco);
+  box-shadow: -8px 0 24px rgba(0, 20, 60, 0.12);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 28px;
+  transform: translateX(100%);
+  transition: transform .28s ease;
+}
+.drawer-overlay.open .drawer { transform: translateX(0); }
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--borda);
+}
+.drawer-header .logo { font-size: 17px; }
+
+.drawer-close { background: none; border: none; color: #6B7086; padding: 4px; cursor: pointer; display: flex; }
+
+.drawer-nav { display: table; width: 100%; border-collapse: separate; border-spacing: 0 2px; padding-top: 4px; }
+
+.drawer-link {
+  display: table-row;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #3A3F52;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.drawer-icon {
+  display: table-cell;
+  width: 20px;
+  vertical-align: middle;
+  padding: 10px 0 10px 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.drawer-text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 10px 10px 12px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.drawer-icon svg {
+  color: #7C8296;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.drawer-link:hover .drawer-icon,
+.drawer-link:hover .drawer-text { background: var(--bg-suave); }
+.drawer-link.active .drawer-icon,
+.drawer-link.active .drawer-text {
+  background: var(--bg-suave);
+  color: var(--azul);
+  font-weight: 700;
+}
+.drawer-link.active .drawer-icon svg { color: var(--azul); }
+
+.drawer-footer { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--borda); }
+.drawer-entrar .drawer-text, .drawer-entrar .drawer-icon svg { color: var(--azul); font-weight: 700; }
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 900px) {
+  .hero-instrucoes { flex-direction: column; padding: 48px 24px; }
+  nav, .section-prep, .section-manual, .section-video, footer { padding-left: 24px; padding-right: 24px; }
+  .nav-links { display: none; }
+  .btn-desktop-only { display: none; }
+  .menu-btn { display: flex; }
+  .drawer-overlay { display: block; }
+  .prep-grid { grid-template-columns: 1fr 1fr; }
+  .manual-step { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+}
