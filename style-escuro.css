@@ -131,11 +131,15 @@ nav {
 .hero {
   display: flex;
   align-items: center;
-  gap: 64px;
   padding: 60px 64px 88px;
-  background: color-mix(in srgb, var(--azul-titulo) 8%, var(--bg-page));
+  min-height: 460px;
+  background-color: var(--bg-page);
+  background-image: url('./images/gato-direita.jpeg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
 }
-.hero-copy { flex: 1; }
+.hero-copy { flex: 1; max-width: 560px; }
 .badge {
   display: inline-block;
   background: var(--bg-surface);
@@ -163,7 +167,6 @@ nav {
   margin-bottom: 30px;
 }
 .hero-actions { display: flex; gap: 14px; }
-.hero-image { flex: 1; height: 380px; }
 
 /* ---------- SECTION HEAD (shared) ---------- */
 .section-head { text-align: center; max-width: 620px; margin: 0 auto 46px; }
@@ -392,7 +395,13 @@ footer {
 .drawer-entrar .drawer-text, .drawer-entrar .drawer-icon svg { color: var(--azul-titulo); font-weight: 700; }
 
 @media (max-width: 900px) {
-  .hero { flex-direction: column; padding: 40px 24px; }
+  .hero {
+    flex-direction: column;
+    padding: 40px 24px;
+    background-image: none;
+    background-color: var(--bg-surface);
+  }
+  .hero-copy { max-width: 100%; }
   nav, .section-diferenciais, .section-audiencia, .section-compromisso, .section-cta-wrap, footer { padding-left: 24px; padding-right: 24px; }
   .diferenciais-grid { grid-template-columns: 1fr; }
   .audiencia-grid { grid-template-columns: 1fr; }
