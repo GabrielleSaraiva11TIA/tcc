@@ -151,7 +151,7 @@ nav {
   font-size: 14.5px;
   line-height: 1.7;
   color: var(--texto-muted);
-  max-width: 460px;
+  max-width: 1000px;
   margin: 0 auto 28px;
   text-align: center;
 }
