@@ -464,3 +464,7 @@
     .menu-btn { display: flex; }
     .drawer-overlay { display: block; }
   }
+
+  html {
+  scroll-behavior: smooth;
+}
