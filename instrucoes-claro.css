@@ -293,7 +293,8 @@ nav {
 
 /* ---------- FOOTER ---------- */
 footer {
-  border-top: 1px solid var(--borda);
+  background: #061B45;
+  color: #A9BCEB;
   padding: 26px 64px;
   display: flex;
   justify-content: space-between;
@@ -301,8 +302,11 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
 }
-.footer-center { font-size: 12.5px; color: var(--cinza); opacity: .75; }
-.footer-links { display: flex; list-style: none; font-size: 12.5px; color: var(--cinza); }
+.footer-left .logo { color: var(--branco); font-size: 17px; }
+.footer-left .logo-pin { color: var(--branco); }
+.footer-left small { display: block; font-size: 11.5px; margin-top: 4px; color: #7C93CE; }
+.footer-center { font-size: 12.5px; color: #A9BCEB; }
+.footer-links { display: flex; list-style: none; font-size: 12.5px; }
 .footer-links li { margin-right: 26px; }
 .footer-links li:last-child { margin-right: 0; }
 

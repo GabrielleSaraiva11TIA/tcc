@@ -350,6 +350,7 @@
     gap: 12px;
   }
   .footer-left .logo { color: var(--branco); font-size: 17px; }
+  .footer-left .logo-pin { color: var(--branco); }
   .footer-left small { display: block; font-size: 11.5px; margin-top: 4px; color: #7C93CE; }
   .footer-center { font-size: 12.5px; color: #A9BCEB; }
   .footer-links {
@@ -447,6 +448,10 @@
   .drawer-footer { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--borda); }
   .drawer-entrar .drawer-text, .drawer-entrar .drawer-icon svg { color: var(--azul); font-weight: 700; }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* ---------- RESPONSIVO ---------- */
   @media (max-width: 900px) {
     .hero { flex-direction: column; padding: 48px 24px; }
@@ -464,7 +469,3 @@
     .menu-btn { display: flex; }
     .drawer-overlay { display: block; }
   }
-
-  html {
-  scroll-behavior: smooth;
-}
