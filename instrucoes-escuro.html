@@ -6,6 +6,7 @@
 <title>LUMIS — Instruções</title>
 <link rel="stylesheet" href="instrucoes-escuro.css">
 <script src="produto-claro.js"></script>
+
 </head>
 <body>
 <div class="page">
@@ -26,29 +27,19 @@
       <li><a href="./produto-m-escuro.html">Produto</a></li>
       <li><a href="./quem-somos-escuro.html">Quem Somos?</a></li>
       <li><a href="./referencias-escuro.html">Referências</a></li>
-      <li><a href="#">Jogo</a></li>
+      <li><a href="./jogo-escuro.html">Jogo</a></li>
     </ul>
 
     <div class="nav-actions">
       <a class="theme-toggle" href="instrucoes-claro.html" aria-label="Ver versão clara">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="4.5" fill="currentColor"/>
-          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-            <line x1="12" y1="2.5" x2="12" y2="4.8"/>
-            <line x1="12" y1="19.2" x2="12" y2="21.5"/>
-            <line x1="2.5" y1="12" x2="4.8" y2="12"/>
-            <line x1="19.2" y1="12" x2="21.5" y2="12"/>
-            <line x1="4.9" y1="4.9" x2="6.5" y2="6.5"/>
-            <line x1="17.5" y1="17.5" x2="19.1" y2="19.1"/>
-            <line x1="4.9" y1="19.1" x2="6.5" y2="17.5"/>
-            <line x1="17.5" y1="6.5" x2="19.1" y2="4.9"/>
-          </g>
+          <path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.55 1.55M18.25 18.25l1.55 1.55M2 12h2.2M19.8 12H22M4.2 19.8l1.55-1.55M18.25 5.75l1.55-1.55" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
       </a>
 
       <a href="#" class="btn btn-primary btn-desktop-only">Entrar</a>
 
-      <!-- Botão hambúrguer — só aparece em telas mobile -->
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
         <span></span>
         <span></span>
@@ -62,7 +53,7 @@
     <div class="hero-copy">
       <h1>Como utilizar o LUMIS</h1>
       <p>Bem-vindo ao guia interativo do Sistema Oralização Multissensorial. Aprenda a configurar e utilizar o LUMIS para uma experiência educacional completa.</p>
-      <a href="#" class="btn btn-primary btn-icon">
+      <a href="#manual-passo-a-passo" class="btn btn-primary btn-icon">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
         Começar Tutorial
       </a>
@@ -104,7 +95,7 @@
   </section>
 
   <!-- MANUAL PASSO A PASSO -->
-  <section class="section-manual">
+  <section class="section-manual" id="manual-passo-a-passo">
     <h2 class="manual-title">Manual Passo a Passo</h2>
 
     <div class="manual-step">
@@ -182,14 +173,14 @@
     </div>
     <div class="footer-center">© 2024 Lumis. Tecnologia Assistiva de Alta Performance.</div>
     <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Project Documentation</a></li>
-      <li><a href="#">Contact Support</a></li>
+      <li><a href="#">Termos</a></li>
+      <li><a href="#">Privacidade</a></li>
+      <li><a href="./quem-somos-escuro.html#fale-conosco">Suporte</a></li>
+      <li><a href="./quem-somos-escuro.html#fale-conosco">Contato</a></li>
     </ul>
   </footer>
 
-  <!-- ===== MENU MOBILE (DRAWER) — só é usado/visível em telas estreitas ===== -->
+  <!-- MENU MOBILE (DRAWER) -->
   <div class="drawer-overlay" id="drawerOverlay">
     <aside class="drawer">
       <div class="drawer-header">

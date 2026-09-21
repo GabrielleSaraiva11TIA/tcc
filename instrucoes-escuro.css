@@ -19,22 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.header-actions { display: flex; align-items: center; gap: 10px; }
-
-.theme-toggle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--bg-surface);
-  color: var(--azul-titulo);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.15s ease, background 0.15s ease;
-}
-.theme-toggle:hover { background: var(--bg-surface-2); }
-.theme-toggle:active { transform: scale(0.92); }
-
 .page { max-width: 1440px; margin: 0 auto; }
 a { text-decoration: none; color: inherit; }
 
@@ -58,11 +42,12 @@ nav {
 .logo-pin { color: var(--azul-titulo); flex-shrink: 0; }
 .nav-links {
   display: flex;
-  gap: 36px;
   list-style: none;
   font-size: 15px;
   color: var(--texto-muted);
 }
+.nav-links li { margin-right: 36px; }
+.nav-links li:last-child { margin-right: 0; }
 .nav-links li a { padding-bottom: 4px; }
 .nav-links li a.active {
   color: var(--azul-titulo);
@@ -87,9 +72,23 @@ nav {
 .btn-outline { background: transparent; color: var(--azul-titulo); border-color: var(--azul-titulo); }
 .btn-icon { display: inline-flex; align-items: center; gap: 9px; }
 
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--azul-titulo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.theme-toggle:hover { background: rgba(59, 130, 246, 0.28); }
+.theme-toggle:active { transform: scale(0.92); }
+
 /* ---------- BOTÃO HAMBÚRGUER (mobile) ---------- */
 .menu-btn {
-  display: none; /* some no desktop */
+  display: none;
   width: 36px;
   height: 36px;
   background: transparent;
@@ -188,15 +187,17 @@ nav {
 /* ---------- ANTES DE COMEÇAR ---------- */
 .section-prep { padding: 70px 64px; background: var(--bg-surface-2); }
 .prep-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -11px;
 }
 .prep-card {
   background: var(--bg-surface);
   border: 1px solid var(--borda);
   border-radius: 14px;
   padding: 22px 20px;
+  flex: 1 1 260px;
+  margin: 11px;
 }
 .prep-icon {
   width: 38px;
@@ -209,7 +210,7 @@ nav {
 .prep-card p { font-size: 13px; color: var(--texto-muted); line-height: 1.55; }
 
 /* ---------- MANUAL PASSO A PASSO ---------- */
-.section-manual { padding: 80px 64px; }
+.section-manual { padding: 80px 64px; scroll-margin-top: 20px; }
 .manual-title {
   font-size: 24px;
   font-weight: 800;
@@ -220,13 +221,14 @@ nav {
   margin-bottom: 56px;
 }
 .manual-step {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 56px;
   margin-bottom: 64px;
 }
 .manual-step:last-child { margin-bottom: 0; }
+.manual-copy, .manual-media { flex: 1 1 380px; }
 .manual-number {
   width: 30px;
   height: 30px;
@@ -302,11 +304,13 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
 }
+.footer-left .logo { color: var(--azul-titulo); font-size: 17px; }
 .footer-center { font-size: 12.5px; color: var(--texto-muted); }
-.footer-links { display: flex; gap: 26px; list-style: none; font-size: 12.5px; color: var(--texto-muted); }
+.footer-links { display: flex; list-style: none; font-size: 12.5px; color: var(--texto-muted); }
+.footer-links li { margin-right: 26px; }
+.footer-links li:last-child { margin-right: 0; }
 
 /* ---------- MENU MOBILE (DRAWER) ---------- */
-/* Cores replicadas do drawer da página de Produto (versão escura) */
 .drawer-overlay {
   display: none;
   position: fixed;
@@ -397,11 +401,11 @@ footer {
 @media (max-width: 900px) {
   .hero-instrucoes { flex-direction: column; padding: 48px 24px; }
   nav, .section-prep, .section-manual, .section-video, footer { padding-left: 24px; padding-right: 24px; }
+  .manual-step { flex-direction: column; }
+  footer { flex-direction: column; text-align: center; }
+
   .nav-links { display: none; }
   .btn-desktop-only { display: none; }
   .menu-btn { display: flex; }
   .drawer-overlay { display: block; }
-  .prep-grid { grid-template-columns: 1fr 1fr; }
-  .manual-step { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; }
 }
