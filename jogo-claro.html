@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LUMIS — Jogo | Ecos do Silêncio</title>
 <link rel="stylesheet" href="jogo-claro.css">
-<script src="produto-claro.js"></script>
+<script src="produto-claro.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -89,7 +89,8 @@
       <p>Sinta o peso do silêncio e o brilho dos fragmentos antes de iniciar sua jornada.</p>
     </div>
     <div class="atmosfera-media img-placeholder">
-      <button class="play-btn" aria-label="Reproduzir vídeo">
+      <video id="atmosferaVideo" src="./images/video-jogo.mp4" muted playsinline></video>
+      <button class="play-btn" id="atmosferaPlayBtn" aria-label="Reproduzir vídeo">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </button>
     </div>
@@ -242,5 +243,28 @@
 
 </div>
 
+<script>
+  const atmosferaVideo = document.getElementById('atmosferaVideo');
+  const atmosferaPlayBtn = document.getElementById('atmosferaPlayBtn');
+
+  if (atmosferaVideo && atmosferaPlayBtn) {
+    atmosferaPlayBtn.addEventListener('click', () => {
+      atmosferaVideo.play();
+    });
+
+    atmosferaVideo.addEventListener('play', () => {
+      atmosferaPlayBtn.style.display = 'none';
+      atmosferaVideo.setAttribute('controls', '');
+    });
+
+    atmosferaVideo.addEventListener('pause', () => {
+      atmosferaPlayBtn.style.display = 'flex';
+    });
+
+    atmosferaVideo.addEventListener('ended', () => {
+      atmosferaPlayBtn.style.display = 'flex';
+    });
+  }
+</script>
 </body>
 </html>
