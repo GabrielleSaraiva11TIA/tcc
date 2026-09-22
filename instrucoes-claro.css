@@ -401,7 +401,9 @@ footer {
 @media (max-width: 900px) {
   .hero-instrucoes { flex-direction: column; padding: 48px 24px; }
   nav, .section-prep, .section-manual, .section-video, footer { padding-left: 24px; padding-right: 24px; }
-  .manual-step { flex-direction: column; }
+  .manual-step { flex-direction: column; gap: 20px; align-items: stretch; }
+  .manual-copy, .manual-media { flex: 1 1 auto; }
+  .manual-media { height: 220px; }
   footer { flex-direction: column; text-align: center; }
 
   .nav-links { display: none; }
