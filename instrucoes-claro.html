@@ -144,19 +144,16 @@
   </section>
 
   <!-- VÍDEO EM FUNCIONAMENTO -->
-  <section class="section-video">
-    <h2>Veja o LUMIS em funcionamento</h2>
-    <div class="video-frame img-placeholder">
-      Espaço reservado para vídeo
-      <button class="play-btn" aria-label="Reproduzir vídeo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div class="video-tags">
-        <span>Demonstração ao Vivo</span>
-        <span>Transformando a Educação Especial</span>
-      </div>
-    </div>
-  </section>
+<div class="video-frame img-placeholder">
+  <video id="lumisVideo" src="./images/video.mp4" muted playsinline></video>
+  <button class="play-btn" id="playBtn" aria-label="Reproduzir vídeo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  </button>
+  <div class="video-tags">
+    <span>Demonstração ao Vivo</span>
+    <span>Transformando a Educação Especial</span>
+  </div>
+</div>
 
   <footer>
     <div class="footer-left">
@@ -262,6 +259,30 @@
   </div>
 
 </div>
+<script>
+  const lumisVideo = document.getElementById('lumisVideo');
+  const playBtn = document.getElementById('playBtn');
 
+  if (lumisVideo && playBtn) {
+    playBtn.addEventListener('click', () => {
+      lumisVideo.play();
+    });
+
+    lumisVideo.addEventListener('play', () => {
+      playBtn.style.display = 'none';
+      lumisVideo.setAttribute('controls', '');
+    });
+
+    lumisVideo.addEventListener('pause', () => {
+      playBtn.style.display = 'flex';
+    });
+
+    lumisVideo.addEventListener('ended', () => {
+      playBtn.style.display = 'flex';
+    });
+  }
+</script>
+</body>
+</html>
 </body>
 </html>

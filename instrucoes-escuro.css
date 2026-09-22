@@ -118,8 +118,10 @@ nav {
   padding: 10px;
   position: relative;
 }
-.img-placeholder:has(img) { border: none; background: none; padding: 0; }
-.img-placeholder img {
+.img-placeholder:has(img),
+.img-placeholder:has(video) { border: none; background: none; padding: 0; }
+.img-placeholder img,
+.img-placeholder video {
   width: 100%;
   height: 100%;
   object-fit: cover;
