@@ -37,7 +37,6 @@
         </svg>
       </a>
 
-
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
         <span></span>
         <span></span>
@@ -62,7 +61,7 @@
     </div>
   </section>
 
-  <!-- CARDS: INSPIRAÇÃO / MENSAGEM / IMPACTO -->
+  <!-- CARDS: A FUGA / OS PORTAIS / O PÁTIO -->
   <section class="section-cards-intro">
     <div class="cards-intro-grid">
       <div class="intro-card">
@@ -84,37 +83,58 @@
   </section>
 
   <!-- MERGULHE NA ATMOSFERA -->
-  <section class="section-atmosfera" id="section-atmosfera" >
+  <section class="section-atmosfera" id="section-atmosfera">
     <div class="atmosfera-head">
       <h2>Mergulhe na Atmosfera</h2>
       <p>Sinta o peso do silêncio e o brilho dos fragmentos antes de iniciar sua jornada.</p>
     </div>
     <div class="atmosfera-media img-placeholder">
-      <video id="atmosferaVideo" src="./images/video-jogo.mp4" muted playsinline preload="metadata" ></video>
+      <video id="atmosferaVideo" src="./images/video-jogo.mp4" muted playsinline preload="metadata"></video>
       <button class="play-btn" id="atmosferaPlayBtn" aria-label="Reproduzir vídeo">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </button>
     </div>
   </section>
 
-  
-
-  <!-- NARRATIVA / ESTÉTICA -->
+  <!-- NARRATIVA / ESTÉTICA (CARROSSEL) -->
   <section class="section-narrativa">
     <div class="narrativa-image img-placeholder">
+      <!-- trilho com as 3 imagens lado a lado -->
+      <div class="narrativa-track" id="narrativaTrack">
+        <img src="./images/narrativa-1.png" alt="Cena do jogo: Lyra inicia sua jornada">
+        <img src="./images/narrativa-2.png" alt="Cena do jogo: Lyra no castelo">
+        <img src="./images/narrativa-3.png" alt="Cena do jogo: Lyra enfrenta Notchar">
+      </div>
       <div class="narrativa-overlay">
         <h3>Narrativa Emergente</h3>
       </div>
     </div>
     <div class="narrativa-side">
       <div class="estetica-card">
-        <span class="estetica-label">VISUAL PREMIUM</span>
-        <h3>Estética de Elite</h3>
-        <p>Direção de arte minimalista inspirada em arquitetura brutalista e sonhos lúcidos.</p>
+        <div class="estetica-viewport">
+          <!-- trilho com os 3 cards lado a lado -->
+          <div class="estetica-track" id="esteticaTrack">
+            <div class="estetica-slide">
+              <span class="estetica-label">AVENTURA</span>
+              <h3>Uma nova jornada</h3>
+              <p>Cada desafio é um passo para Lyra recuperar aquilo que perdeu.</p>
+            </div>
+            <div class="estetica-slide" aria-hidden="true">
+              <span class="estetica-label">INCLUSÃO</span>
+              <h3>Além do silêncio</h3>
+              <p>Uma aventura criada para que crianças surdas também possam se enxergar como protagonistas.</p>
+            </div>
+            <div class="estetica-slide" aria-hidden="true">
+              <span class="estetica-label">PROTAGONISMO</span>
+              <h3>Representatividade</h3>
+              <p>Porque toda criança merece se ver em histórias onde ela pode ser a heroína.</p>
+            </div>
+          </div>
+        </div>
         <div class="estetica-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+          <button class="dot active" data-slide="0" aria-label="Ver card 1"></button>
+          <button class="dot" data-slide="1" aria-label="Ver card 2"></button>
+          <button class="dot" data-slide="2" aria-label="Ver card 3"></button>
         </div>
       </div>
       <div class="mini-cards">
@@ -245,6 +265,7 @@
 </div>
 
 <script>
+  // ----- VÍDEO DA SEÇÃO ATMOSFERA -----
   const atmosferaVideo = document.getElementById('atmosferaVideo');
   const atmosferaPlayBtn = document.getElementById('atmosferaPlayBtn');
 
@@ -266,6 +287,29 @@
       atmosferaPlayBtn.style.display = 'flex';
     });
   }
+
+  // ----- CARROSSEL DA SEÇÃO NARRATIVA -----
+  // Os textos e imagens ficam no HTML; aqui só movemos os "trilhos"
+  const esteticaTrack = document.getElementById('esteticaTrack');
+  const narrativaTrack = document.getElementById('narrativaTrack');
+  const esteticaSlides = document.querySelectorAll('.estetica-slide');
+  const dots = document.querySelectorAll('.estetica-dots .dot');
+
+  function irParaSlide(index) {
+    const posicao = `translateX(-${index * 100}%)`;
+    esteticaTrack.style.transform = posicao;
+    narrativaTrack.style.transform = posicao;
+
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    esteticaSlides.forEach((s, i) => {
+      if (i === index) s.removeAttribute('aria-hidden');
+      else s.setAttribute('aria-hidden', 'true');
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => irParaSlide(Number(dot.dataset.slide)));
+  });
 </script>
 </body>
 </html>
